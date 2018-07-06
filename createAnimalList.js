@@ -1,3 +1,8 @@
+// Pass a single letter to your script
+// Read the animals.txt file
+// Grab every animal which begins with the letter
+// Write that list of animals to a new file called "{letter}_animals.txt"
+
 const fs = require('fs');
 
 let firstLetterFromArg = process.argv[2].toUpperCase();
