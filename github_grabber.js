@@ -37,6 +37,7 @@ const getOptionObj = function(username) {
   return {
     hostname: 'api.github.com',
     path: `/users/${username}/starred`,
+    // path: `/users/${username}/repos`,
     // this is required for github API, use your username or project name as the value
     headers: {
         'User-Agent': 'github-grabber'
@@ -74,7 +75,7 @@ const githubServer = http.createServer((req, res) => {
 
       https.get(optObj, (getRes) => {
         let githubData = "";
-        
+
         getRes.on("data", (d) => {
           githubData += d;
         });
