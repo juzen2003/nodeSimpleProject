@@ -35,6 +35,7 @@ const fs = require('fs');
 
 const getOptionObj = function(username) {
   return {
+    // https://developer.github.com/v3/apps/
     hostname: 'api.github.com',
     path: `/users/${username}/starred`,
     // path: `/users/${username}/repos`,
